@@ -50,7 +50,7 @@ function garland(w, step, cls) {
   return `<svg class="garland ${cls}" viewBox="0 0 ${w} 220" preserveAspectRatio="xMidYMin slice" aria-hidden="true">${g}</svg>`;
 }
 const gazebo =`<svg class="gazebo" viewBox="0 0 200 200" fill="none" stroke="#fff" stroke-width="1.2" opacity=".75"><path d="M100 6v22M94 14h12M100 28c-26 6-48 26-52 46h104c-4-20-26-40-52-46zM40 74h120M52 74v100M148 74v100M76 74v100M124 74v100M100 74v100M40 174h120M46 82h108"/></svg>`;
-const birdLg = `<svg class="bird-lg" viewBox="0 0 120 60" fill="none" stroke="#c9a46a" stroke-width="1" opacity=".55"><path d="M4 40c20-8 36-6 52 4 6-16 22-30 42-34-6 6-10 12-12 20 10-4 20-6 30-4-10 4-18 10-24 18-8 10-18 14-30 12-14-2-26-8-34-16-8 0-16 0-24-4z"/><path d="M56 44l-14 14M62 46l-4 12"/></svg>`;
+const birdLg = `<svg class="bird-lg" viewBox="0 0 120 60" fill="none" stroke="#d6b57c" stroke-width="1" opacity=".55"><path d="M4 40c20-8 36-6 52 4 6-16 22-30 42-34-6 6-10 12-12 20 10-4 20-6 30-4-10 4-18 10-24 18-8 10-18 14-30 12-14-2-26-8-34-16-8 0-16 0-24-4z"/><path d="M56 44l-14 14M62 46l-4 12"/></svg>`;
 const ico = {
   craft: `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1"><path d="M9 38c-2-4 0-8 3-11l14-14c3-3 8-3 9-1 1 2-1 6-4 9L17 35c-3 3-6 5-8 3z"/><path d="M39 38c2-4 0-8-3-11L22 13c-3-3-8-3-9-1-1 2 1 6 4 9l14 14c3 3 6 5 8 3z"/><circle cx="24" cy="25" r="2"/><path d="M13 14l5 5M35 14l-5 5" opacity=".7"/></svg>`,
   creative: `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1"><circle cx="24" cy="24" r="19"/><circle cx="24" cy="24" r="16" opacity=".5"/><text x="24" y="30" text-anchor="middle" font-family="Cormorant Garamond,serif" font-style="italic" font-size="17" fill="currentColor" stroke="none">RK</text></svg>`,

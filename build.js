@@ -71,7 +71,7 @@ pages.index = ['Home', `
     <h2>Extraordinary<br>Weddings.<br>Thoughtfully Crafted.</h2>
     <p>A confluence of culture, beauty and impeccable execution — for celebrations that are deeply personal and truly unforgettable.</p>
   </div>
-  <div class="intro-img"><img src="${I('lake')}" alt=""></div>
+  <div class="intro-img"><img src="${I('intro-bg')}" alt=""></div>
 </section>
 <section class="pillars">
   <div class="reveal"><img src="assets/img/ic-craft.png" alt=""><span>WEDDING<br>CRAFT</span></div>
@@ -86,14 +86,14 @@ pages.index = ['Home', `
 
 /* ABOUT */
 pages.about = ['About', `
-<section class="hero hero-about"><img class="bg" src="${I('redcouple')}" alt=""><div class="shade maroon"></div>
+<section class="hero hero-about"><img class="bg" src="${I('about-hero')}" alt=""><div class="shade maroon"></div>
   <div class="hero-in reveal"><h1>More than<br>weddings.<br>A philosophy<br>of belonging.</h1><span class="rule"></span>
   <blockquote>“We believe the most extraordinary weddings are not just seen, but felt — in the people, the places and the moments in between.”</blockquote></div>
 </section>
 <section class="story">
   <div class="story-text reveal"><h3 class="eyebrow">THE REDKNOT STORY</h3>
   <p>With over 18 years of experience in the events industry, RedKnot has crafted large-scale, high-impact experiences. The deep understanding of creative production, hospitality and on-ground execution now shapes our approach to weddings — where every detail is considered, every moment is intentional and every celebration is uniquely yours.</p><p>Today, we channel that knowledge, creative sensibility and operational precision into crafting extraordinary weddings.</p>${btn('OUR APPROACH', 'services.html')}</div>
-  <div class="story-imgs"><img class="reveal" src="${I('cityglow')}" alt=""><img class="reveal" src="${I('arch')}" alt=""></div>
+  <div class="story-imgs"><img class="reveal" src="${I('story-1')}" alt=""><img class="reveal" src="${I('story-2')}" alt=""></div>
 </section>
 <section class="drives">
   <img class="bird-s b1" src="assets/img/dr-bird.png" alt="">
@@ -105,18 +105,18 @@ pages.about = ['About', `
     <div class="drive reveal"><img src="assets/img/dr-flowers.png" alt=""><div><h4>SEAMLESS EXECUTION</h4><p>So you can be fully present, always.</p></div></div>
   </div>
 </section>
-<section class="closer bw"><img class="bg" src="${I('hands')}" alt=""><div class="shade"></div>
+<section class="closer bw"><img class="bg" src="${I('family-closer')}" alt=""><div class="shade"></div>
   <h2 class="reveal">Different families.<br>Different stories.<br>Always extraordinary.</h2>
 </section>`];
 
 /* SERVICES */
 const svc = [
-  ['01', 'CREATIVE DIRECTION', 'We shape a unique creative vision that reflects your story, style and sense of celebration.', null],
-  ['02', 'PLANNING & PRODUCTION', 'End-to-end planning with meticulous attention to detail and flawless delivery on ground', 'aisle'],
-  ['03', 'DESIGN & DÉCOR', 'Bespoke environments that bring your vision to life — from concept to creation', 'mandap'],
-  ['04', 'DESTINATION MANAGEMENT', 'Seamless logistics, travel and on-ground coordination for extraordinary destination weddings.', 'lake'],
-  ['05', 'HOSPITALITY & GUEST EXPERIENCE', 'Thoughtful hospitality that makes every guest feel at home.', 'table'],
-  ['06', 'ENTERTAINMENT & CELEBRITY MANAGEMENT', 'Curated experience with leading talent to create unforgettable moments.', 'lights'],
+  ['01', 'CREATIVE DIRECTION', 'We shape a unique creative vision that reflects your story, style and sense of celebration.', 'creative-direction'],
+  ['02', 'PLANNING & PRODUCTION', 'End-to-end planning with meticulous attention to detail and flawless delivery on ground', 'planning-production'],
+  ['03', 'DESIGN & DÉCOR', 'Bespoke environments that bring your vision to life — from concept to creation', 'design-decor'],
+  ['04', 'DESTINATION MANAGEMENT', 'Seamless logistics, travel and on-ground coordination for extraordinary destination weddings.', 'destination'],
+  ['05', 'HOSPITALITY & GUEST EXPERIENCE', 'Thoughtful hospitality that makes every guest feel at home.', 'hospitality'],
+  ['06', 'ENTERTAINMENT & CELEBRITY MANAGEMENT', 'Curated experience with leading talent to create unforgettable moments.', 'entertainment'],
 ];
 pages.services = ['Services', `
 <section class="hero hero-services"><picture><source media="(min-width:900px)" srcset="assets/img/services-desktop.jpg"><img class="bg" src="assets/img/services-mobile.jpg" alt=""></picture><div class="shade light"></div>
@@ -129,9 +129,9 @@ ${svc.map(([n, t, d, img], i) => `<article class="svc ${i % 2 ? 'flip' : ''} rev
 <section class="cta-block">${sketch('sk-cta')}<h2 class="reveal">Let's craft your celebration.</h2>${btn('ENQUIRE NOW')}</section>`];
 
 /* PORTFOLIO */
-const chap = [['01', 'Welcome Evening', 'nightpalace'], ['02', 'Haldi & Mehendi', 'mehndi'], ['03', 'Cocktail', 'aisle'], ['04', 'The Wedding', 'mandap'], ['05', 'Farewell', 'farewell']];
+const chap = [['01', 'Welcome Evening', 'welcome-evening'], ['02', 'Haldi & Mehendi', 'mehndi'], ['03', 'Cocktail', 'aisle'], ['04', 'The Wedding', 'mandap'], ['05', 'Farewell', 'farewell']];
 pages.portfolio = ['Portfolio', `
-<section class="hero hero-port"><img class="bg" src="${I('cityglow')}" alt=""><div class="shade"></div>
+<section class="hero hero-port"><img class="bg" src="${I('portfolio-hero')}" alt=""><div class="shade"></div>
   <div class="hero-in reveal"><h1>Weddings<br>as unique<br>as the people<br>who celebrate them.</h1><span class="rule"></span></div>
   <div class="explore reveal"><p class="kicker sm">EXPLORE BY CHAPTER</p><p class="sub">A glimpse into the different moments that come together to create an unforgettable wedding experience</p></div>
 </section>

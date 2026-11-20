@@ -916,3 +916,9 @@ body:not(.page-index) .site-header .nav a{color:#08291f;opacity:1;font-weight:50
   .t-intro p{color:#1f4a3b!important;font-weight:400}
   .story-text p,.faq-head p{color:#2f5447!important}
 }
+.chapter:nth-child(3) img{object-position:50% 38%}
+.chapter:nth-child(3) .shade{background:linear-gradient(90deg,rgba(5,30,22,.65) 0%,rgba(5,30,22,.3) 40%,rgba(5,30,22,.05) 75%,rgba(5,30,22,0) 100%)}
+.chapter:nth-child(2) img{object-position:50% 55%}
+.chapter:nth-child(2) .shade{background:linear-gradient(90deg,rgba(5,30,22,.72) 0%,rgba(5,30,22,.4) 38%,rgba(5,30,22,.08) 70%,rgba(5,30,22,0) 100%),linear-gradient(0deg,rgba(5,30,22,.35) 0%,rgba(5,30,22,0) 45%)}
+.chapter:nth-child(4) img{object-position:50% 45%}
+.chapter:nth-child(4) .shade{background:linear-gradient(90deg,rgba(5,30,22,.72) 0%,rgba(5,30,22,.4) 38%,rgba(5,30,22,.08) 70%,rgba(5,30,22,0) 100%),linear-gradient(0deg,rgba(5,30,22,.3) 0%,rgba(5,30,22,0) 40%)}

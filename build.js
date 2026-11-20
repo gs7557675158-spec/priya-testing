@@ -129,7 +129,7 @@ ${svc.map(([n, t, d, img], i) => `<article class="svc ${i % 2 ? 'flip' : ''} rev
 <section class="cta-block">${sketch('sk-cta')}<h2 class="reveal">Let's craft your celebration.</h2>${btn('ENQUIRE NOW')}</section>`];
 
 /* PORTFOLIO */
-const chap = [['01', 'Welcome Evening', 'welcome-evening'], ['02', 'Haldi & Mehendi', 'mehndi'], ['03', 'Cocktail', 'aisle'], ['04', 'The Wedding', 'mandap'], ['05', 'Farewell', 'farewell']];
+const chap = [['01', 'Welcome Evening', 'welcome-evening'], ['02', 'Haldi & Mehendi', 'haldi'], ['03', 'Cocktail', 'cocktail'], ['04', 'The Wedding', 'wedding'], ['05', 'Farewell', 'farewell']];
 pages.portfolio = ['Portfolio', `
 <section class="hero hero-port"><img class="bg" src="${I('portfolio-hero')}" alt=""><div class="shade"></div>
   <div class="hero-in reveal"><h1>Weddings<br>as unique<br>as the people<br>who celebrate them.</h1><span class="rule"></span></div>

@@ -141,7 +141,6 @@ ${chap.map(([n, t, img]) => `<a class="chapter reveal" href="contact.html"><img 
 <section class="cta-block sm">${sketch('sk-cta')}<h2 class="reveal">Stories that stay with you.</h2>${btn('VIEW ALL WEDDINGS', 'contact.html')}</section>`];
 
 /* TESTIMONIALS */
-const tmIcons = ['<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="32" cy="32" r="23"/><circle cx="32" cy="32" r="19.5" opacity=".5"/><path d="M32 11L36.5 27.5 53 32 36.5 36.5 32 53 27.5 36.5 11 32 27.5 27.5Z"/><circle cx="32" cy="32" r="2"/><path d="M32 6V9M32 55V58M6 32H9M55 32H58"/></svg>', '<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="26" r="15"/><circle cx="40" cy="26" r="15"/><circle cx="32" cy="40" r="15"/></svg>', '<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M26 10C27 25 33 31 48 32 33 33 27 39 26 54 25 39 19 33 4 32 19 31 25 25 26 10Z" transform="translate(5 1)"/><path d="M49 8C49.5 13 51.5 15 56.5 15.5 51.5 16 49.5 18 49 23 48.5 18 46.5 16 41.5 15.5 46.5 15 48.5 13 49 8Z"/><path d="M47 43C47.4 47 49 48.6 53 49 49 49.4 47.4 51 47 55 46.6 51 45 49.4 41 49 45 48.6 46.6 47 47 43Z"/></svg>', '<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 54C10 38 8 18 21 14.5 26 13.2 30 15.5 32 20 34 15.5 38 13.2 43 14.5 56 18 54 38 32 54Z"/><path d="M32 28C28.5 31.5 28.5 36 32 40 35.5 36 35.5 31.5 32 28Z"/><path d="M21 22C18 24 17.5 28 19 31" opacity=".6"/><path d="M26 58H38" /></svg>'];
 const tm = [
   ['A & R', 'Delhi', 'From the first conversation to the final farewell, everything felt effortless. The team understood and respected our vision and brought it to life beyond our expectations.', 'archframe'],
   ['S & K', 'Udaipur', 'Every function felt different, yet beautifully connected. The attention to detail, the guest experience and the overall execution were simply incredible.', 'couple', 'bw'],
@@ -154,7 +153,7 @@ pages.testimonials = ['Testimonials', `
   <img class="t-hero reveal" src="${I('table')}" alt=""><div class="t-fade"></div>
 </section>
 <section class="t-list">
-${tm.map(([n, c, q, img, f], i) => `<article class="tm ${i % 2 ? 'flip' : ''} reveal"><div class="tm-t"><span class="qm">“</span><p>${q}</p><strong>${n}</strong><em>${c}</em></div><div class="tm-i">${tmIcons[i]}</div></article>`).join('\n')}
+${tm.map(([n, c, q, img, f], i) => `<article class="tm ${i % 2 ? 'flip' : ''} reveal"><div class="tm-t"><span class="qm">“</span><p>${q}</p><strong>${n}</strong><em>${c}</em></div></article>`).join('\n')}
 </section>
 <section class="cta-block sm">${sketch('sk-cta')}<h2 class="reveal">Your story could be next.</h2>${btn('ENQUIRE NOW')}</section>`];
 

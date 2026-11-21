@@ -947,3 +947,9 @@ body:not(.page-index) .site-header .nav a{color:#08291f;opacity:1;font-weight:50
 .film-decor h2{color:#fbe3df;text-shadow:0 2px 18px rgba(0,0,0,.45)}
 @media(max-width:899px){.film-decor{min-height:460px}}
 @media(min-width:900px){.film-decor{min-height:640px}.film-decor .film-in{padding-bottom:70px}}
+
+/* testimonials: icons instead of photos */
+.tm-i{display:flex;align-items:center;justify-content:center;height:clamp(150px,44vw,240px);background:#fbebe8;color:#c9a368}
+.tm-i svg{width:clamp(64px,20vw,96px);height:auto}
+.tm.flip .tm-i{order:-1}
+@media(min-width:900px){.tm-i{height:460px}.tm-i svg{width:150px}}

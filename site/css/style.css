@@ -922,3 +922,28 @@ body:not(.page-index) .site-header .nav a{color:#08291f;opacity:1;font-weight:50
 .chapter:nth-child(2) .shade{background:linear-gradient(90deg,rgba(5,30,22,.72) 0%,rgba(5,30,22,.4) 38%,rgba(5,30,22,.08) 70%,rgba(5,30,22,0) 100%),linear-gradient(0deg,rgba(5,30,22,.35) 0%,rgba(5,30,22,0) 45%)}
 .chapter:nth-child(4) img{object-position:50% 45%}
 .chapter:nth-child(4) .shade{background:linear-gradient(90deg,rgba(5,30,22,.72) 0%,rgba(5,30,22,.4) 38%,rgba(5,30,22,.08) 70%,rgba(5,30,22,0) 100%),linear-gradient(0deg,rgba(5,30,22,.3) 0%,rgba(5,30,22,0) 40%)}
+
+/* about: "What Drives Us" value cards */
+.vals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;max-width:1100px;margin:0 auto;position:relative;z-index:1}
+.val{background:#fbebe8;padding:26px 10px 28px;text-align:center;display:flex;flex-direction:column;align-items:center}
+.val svg{width:38px;height:38px;color:#c9a368;margin-bottom:16px;flex:none}
+.val h4{font-family:var(--serif);font-weight:700;font-size:11px;letter-spacing:.05em;line-height:1.45;color:#0f4a38;margin:0 0 10px}
+.val p{font-family:var(--serif);font-style:italic;font-weight:500;font-size:12.5px;line-height:1.5;color:#2f5447;margin:0;max-width:140px}
+@media(min-width:600px){.val{padding:40px 22px 44px}.val svg{width:56px;height:56px;margin-bottom:22px}.val h4{font-size:15px}.val p{font-size:17px;max-width:230px}}
+@media(min-width:900px){.vals{gap:22px}.val{padding:58px 30px 64px}.val svg{width:76px;height:76px;margin-bottom:30px}.val h4{font-size:20px;letter-spacing:.07em;margin-bottom:16px}.val p{font-size:22px;max-width:270px}}
+@media(max-width:599px){
+  .drives{padding-left:3.5%!important;padding-right:3.5%!important}
+  .val{padding:22px 5px 24px}
+  .val h4{font-size:10px;letter-spacing:.02em;white-space:nowrap}
+  .val p{font-size:12.5px;max-width:none;padding:0 2px}
+}
+.chapter:nth-child(3) img{object-position:50% 40%}
+.chapter:nth-child(3) .shade{background:linear-gradient(90deg,rgba(5,30,22,.7) 0%,rgba(5,30,22,.38) 38%,rgba(5,30,22,.06) 70%,rgba(5,30,22,0) 100%),linear-gradient(0deg,rgba(5,30,22,.3) 0%,rgba(5,30,22,0) 40%)}
+
+/* home closing section: décor photo instead of video */
+.film-decor .bg{filter:none;object-position:50% 55%}
+.film-decor .film-shade{background:linear-gradient(180deg,rgba(5,30,22,.1) 0%,rgba(5,30,22,.18) 40%,rgba(5,30,22,.7) 100%)}
+.film-decor .film-in{padding:0 20px 44px}
+.film-decor h2{color:#fbe3df;text-shadow:0 2px 18px rgba(0,0,0,.45)}
+@media(max-width:899px){.film-decor{min-height:460px}}
+@media(min-width:900px){.film-decor{min-height:640px}.film-decor .film-in{padding-bottom:70px}}

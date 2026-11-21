@@ -96,8 +96,6 @@ pages.about = ['About', `
   <div class="story-imgs"><img class="reveal" src="${I('story-1')}" alt=""><img class="reveal" src="${I('story-2')}" alt=""></div>
 </section>
 <section class="drives">
-  <img class="bird-s b1" src="assets/img/dr-bird.png" alt="">
-  <img class="bird-s b2" src="assets/img/dr-flourish.png" alt="">
   <h2 class="reveal">What Drives Us</h2>
   <div class="vals">
     <div class="val reveal"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 12C26 20 26 31 32 39 38 31 38 20 32 12Z"/><path d="M32 39C22 37 17 29 18 21 25 23 30 29 32 39ZM32 39C42 37 47 29 46 21 39 23 34 29 32 39Z"/><path d="M32 42C18 44 9 36 8 28 17 28 26 34 32 42ZM32 42C46 44 55 36 56 28 47 28 38 34 32 42Z"/><path d="M16 50H48M22 55H42"/><circle cx="32" cy="9" r="1.2"/></svg><h4>PEOPLE<br>AT THE CENTRE</h4><p>Relationships above everything else.</p></div>

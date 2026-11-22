@@ -1133,3 +1133,12 @@ body:not(.page-index) .site-header .nav a{color:#08291f;opacity:1;font-weight:50
 .hero-port .rule{margin:16px 0 10px}
 @media(min-width:900px){.hero-port h1{font-size:clamp(48px,4.8vw,76px);line-height:1.02;letter-spacing:-.005em}.hero-port .rule{margin:18px 0 12px}}
 .sketch{display:none!important}
+
+/* contact closing – phones: heading sits near the top, section is compact */
+@media(max-width:899px){
+  .contact-end{height:max(400px,104vw)}
+  .contact-end h2{top:48px}
+  .contact-end>.rule{top:calc(48px + 108px)}
+  .ce-img{height:min(200px,52vw)}
+}
+@media(max-width:899px){.contact-end{height:clamp(400px,104vw,452px)}}

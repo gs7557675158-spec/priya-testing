@@ -18,7 +18,7 @@ const layout = (file, title, body) => `<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20261124">
+<link rel="stylesheet" href="css/style.css?v=20261125">
 </head>
 <body class="page-${file}">
 <header class="site-header${file === 'index' ? ' on-hero' : file === 'services' ? ' on-hero dark' : ''}">
@@ -28,7 +28,7 @@ const layout = (file, title, body) => `<!DOCTYPE html>
 <main>
 ${body}
 </main>
-<script src="js/main.js?v=20261124"></script>
+<script src="js/main.js?v=20261125"></script>
 </body>
 </html>
 `;

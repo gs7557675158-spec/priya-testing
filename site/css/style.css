@@ -1132,3 +1132,4 @@ body:not(.page-index) .site-header .nav a{color:#08291f;opacity:1;font-weight:50
 .hero-port h1{line-height:1.0}
 .hero-port .rule{margin:16px 0 10px}
 @media(min-width:900px){.hero-port h1{font-size:clamp(48px,4.8vw,76px);line-height:1.02;letter-spacing:-.005em}.hero-port .rule{margin:18px 0 12px}}
+.sketch{display:none!important}

@@ -18,7 +18,7 @@ const layout = (file, title, body) => `<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20261123">
+<link rel="stylesheet" href="css/style.css?v=20261124">
 </head>
 <body class="page-${file}">
 <header class="site-header${file === 'index' ? ' on-hero' : file === 'services' ? ' on-hero dark' : ''}">
@@ -28,7 +28,7 @@ const layout = (file, title, body) => `<!DOCTYPE html>
 <main>
 ${body}
 </main>
-<script src="js/main.js?v=20261123"></script>
+<script src="js/main.js?v=20261124"></script>
 </body>
 </html>
 `;
@@ -125,9 +125,9 @@ pages.services = ['Services', `
   <p>To the first idea to the final farewell we bring together the creativity, the precision and care to craft celebrations that are seamless, immersive and deeply meaningful</p></div>
 </section>
 <section class="svc-list">
-${svc.map(([n, t, d, img], i) => `<article class="svc ${i % 2 ? 'flip' : ''} reveal"><div class="svc-t"><span class="num">${n}</span><h3>${t}</h3><p>${d}</p></div><div class="svc-i">${img ? `<img src="${I(img)}" alt="">` : `<div class="paper">${sketch('sk-svc')}</div>`}</div></article>`).join('\n')}
+${svc.map(([n, t, d, img], i) => `<article class="svc ${i % 2 ? 'flip' : ''} reveal"><div class="svc-t"><span class="num">${n}</span><h3>${t}</h3><p>${d}</p></div><div class="svc-i">${img ? `<img src="${I(img)}" alt="">` : `<div class="paper"></div>`}</div></article>`).join('\n')}
 </section>
-<section class="cta-block">${sketch('sk-cta')}<h2 class="reveal">Let's craft your celebration.</h2>${btn('ENQUIRE NOW')}</section>`];
+<section class="cta-block"><h2 class="reveal">Let's craft your celebration.</h2>${btn('ENQUIRE NOW')}</section>`];
 
 /* PORTFOLIO */
 const chap = [['01', 'Welcome Evening', 'welcome-evening'], ['02', 'Haldi & Mehendi', 'haldi'], ['03', 'Cocktail', 'cocktail'], ['04', 'The Wedding', 'wedding'], ['05', 'Farewell', 'farewell']];
@@ -139,7 +139,7 @@ pages.portfolio = ['Portfolio', `
 <section class="chapters">
 ${chap.map(([n, t, img]) => `<a class="chapter reveal" href="contact.html"><img src="${I(img)}" alt=""><div class="shade"></div><div class="ch-t"><span>${n}</span><h3>${t}</h3></div><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M7 12h10M13 8l4 4-4 4"/></svg></span></a>`).join('\n')}
 </section>
-<section class="cta-block sm">${sketch('sk-cta')}<h2 class="reveal">Stories that stay with you.</h2>${btn('VIEW ALL WEDDINGS', 'contact.html')}</section>`];
+<section class="cta-block sm"><h2 class="reveal">Stories that stay with you.</h2>${btn('VIEW ALL WEDDINGS', 'contact.html')}</section>`];
 
 /* TESTIMONIALS */
 const tm = [
@@ -156,7 +156,7 @@ pages.testimonials = ['Testimonials', `
 <section class="t-list">
 ${tm.map(([n, c, q, img, f], i) => `<article class="tm ${i % 2 ? 'flip' : ''} reveal"><div class="tm-t"><span class="qm">“</span><p>${q}</p><strong>${n}</strong><em>${c}</em></div></article>`).join('\n')}
 </section>
-<section class="cta-block sm">${sketch('sk-cta')}<h2 class="reveal">Your story could be next.</h2>${btn('ENQUIRE NOW')}</section>`];
+<section class="cta-block sm"><h2 class="reveal">Your story could be next.</h2>${btn('ENQUIRE NOW')}</section>`];
 
 /* CONTACT */
 pages.contact = ['Contact', `
@@ -176,7 +176,7 @@ pages.contact = ['Contact', `
     <p class="thanks" hidden>Thank you — we will be in touch shortly.</p>
   </form>
 </section>
-<section class="contact-end">${sketch('sk-c1')}${sketch('sk-c2')}<h2 class="reveal">Extraordinary<br>begins with<br>a single conversation.</h2><span class="rule"></span><div class="ce-img"><img src="${I('flowers')}" alt=""><div class="fade"></div></div></section>`];
+<section class="contact-end"><h2 class="reveal">Extraordinary<br>begins with<br>a single conversation.</h2><span class="rule"></span><div class="ce-img"><img src="${I('flowers')}" alt=""><div class="fade"></div></div></section>`];
 
 /* FAQS */
 const faq = [
@@ -198,7 +198,7 @@ pages.faqs = ['FAQs', `
 <section class="faq-list">
 ${faq.map(([q, a]) => `<details class="faq reveal"><summary>${q}<i></i></summary><p>${a}</p></details>`).join('\n')}
 </section>
-<section class="faq-end">${sketch('sk-f1')}<div class="fe-img"><img src="${I('pavilion')}" alt=""><div class="fade"></div></div>
+<section class="faq-end"><div class="fe-img"><img src="${I('pavilion')}" alt=""><div class="fade"></div></div>
   <div class="fe-t reveal"><h2>Still have a question?</h2><p>We're here to help.</p>${btn('GET IN TOUCH', 'contact.html')}</div></section>`];
 
 fs.mkdirSync(OUT, { recursive: true });

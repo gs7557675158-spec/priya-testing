@@ -18,7 +18,7 @@ const layout = (file, title, body) => `<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v=20261123">
 </head>
 <body class="page-${file}">
 <header class="site-header${file === 'index' ? ' on-hero' : file === 'services' ? ' on-hero dark' : ''}">
@@ -28,7 +28,7 @@ const layout = (file, title, body) => `<!DOCTYPE html>
 <main>
 ${body}
 </main>
-<script src="js/main.js"></script>
+<script src="js/main.js?v=20261123"></script>
 </body>
 </html>
 `;
@@ -91,11 +91,14 @@ pages.about = ['About', `
   <blockquote>“We believe the most extraordinary weddings are not just seen, but felt — in the people, the places and the moments in between.”</blockquote></div>
 </section>
 <section class="story">
+  <div class="orn orn-a" aria-hidden="true"><img class="o-knot" src="assets/img/orn-knot.svg" alt=""><img class="o-wave" src="assets/img/orn-wave-a.svg" alt=""><img class="o-arch" src="assets/img/orn-arch.svg" alt=""></div>
   <div class="story-text reveal"><h3 class="eyebrow">THE REDKNOT STORY</h3>
   <p>With over 18 years of experience in the events industry, RedKnot has crafted large-scale, high-impact experiences. The deep understanding of creative production, hospitality and on-ground execution now shapes our approach to weddings — where every detail is considered, every moment is intentional and every celebration is uniquely yours.</p><p>Today, we channel that knowledge, creative sensibility and operational precision into crafting extraordinary weddings.</p>${btn('OUR APPROACH', 'services.html')}</div>
   <div class="story-imgs"><img class="reveal" src="${I('story-1')}" alt=""><img class="reveal" src="${I('story-2')}" alt=""></div>
 </section>
 <section class="drives">
+  <div class="orn orn-b" aria-hidden="true"><img class="o-arch" src="assets/img/orn-arch.svg" alt=""><img class="o-wave" src="assets/img/orn-wave-b.svg" alt=""><img class="o-knot" src="assets/img/orn-knot.svg" alt=""><img class="o-plant" src="assets/img/orn-plant.svg" alt=""></div>
+  
   <h2 class="reveal">What Drives Us</h2>
   <div class="vals">
     <div class="val reveal"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 12C26 20 26 31 32 39 38 31 38 20 32 12Z"/><path d="M32 39C22 37 17 29 18 21 25 23 30 29 32 39ZM32 39C42 37 47 29 46 21 39 23 34 29 32 39Z"/><path d="M32 42C18 44 9 36 8 28 17 28 26 34 32 42ZM32 42C46 44 55 36 56 28 47 28 38 34 32 42Z"/><path d="M16 50H48M22 55H42"/><circle cx="32" cy="9" r="1.2"/></svg><h4>PEOPLE<br>AT THE CENTRE</h4><p>Relationships above everything else.</p></div>
@@ -148,7 +151,7 @@ const tm = [
 pages.testimonials = ['Testimonials', `
 <section class="t-intro">${bird}
   <div class="reveal"><h1>In their<br>words.</h1><p>Real people. Real emotions.<br>A few thoughts from families<br>who’ve had the honour to celebrate with.</p></div>
-  <img class="t-hero reveal" src="${I('table')}" alt=""><div class="t-fade"></div>
+  <img class="t-hero reveal" src="assets/img/testimonials-hero-m.jpg" srcset="assets/img/testimonials-hero-m.jpg 760w, assets/img/testimonials-hero.jpg 1175w" sizes="(min-width:900px) 60vw, 100vw" alt="A bride and groom share a joyful moment during their wedding ceremony" fetchpriority="high" width="1175" height="1175"><div class="t-fade"></div>
 </section>
 <section class="t-list">
 ${tm.map(([n, c, q, img, f], i) => `<article class="tm ${i % 2 ? 'flip' : ''} reveal"><div class="tm-t"><span class="qm">“</span><p>${q}</p><strong>${n}</strong><em>${c}</em></div></article>`).join('\n')}
@@ -157,7 +160,7 @@ ${tm.map(([n, c, q, img, f], i) => `<article class="tm ${i % 2 ? 'flip' : ''} re
 
 /* CONTACT */
 pages.contact = ['Contact', `
-<section class="hero hero-contact"><img class="bg" src="${I('archcouple')}" alt=""><div class="shade"></div>
+<section class="hero hero-contact"><img class="bg" src="assets/img/contact-hero-m.jpg" srcset="assets/img/contact-hero-m.jpg 900w, assets/img/contact-hero.jpg 1206w" sizes="100vw" alt="A marble desk with white roses, a handwritten planning book and a tablet showing wedding décor ideas" fetchpriority="high" width="1206" height="796"><div class="shade"></div>
   <div class="hero-in reveal"><h1>Let's begin<br>a conversation.</h1><p>Tell us a little about your celebration,<br>and we'll take it from there.</p></div>
 </section>
 <section class="form-wrap">
@@ -189,7 +192,7 @@ const faq = [
   ['What makes Tied Once by RedKnot different?', 'With over 38 years of experience in the events industry, RedKnot brings creative, production, hospitality and on-ground execution together for every celebration.'],
 ];
 pages.faqs = ['FAQs', `
-<section class="faq-hero"><div class="faq-img"><img src="${I('arch')}" alt=""><div class="fade b"></div></div>
+<section class="faq-hero"><div class="faq-img"><img src="assets/img/faq-hero-m.jpg" srcset="assets/img/faq-hero-m.jpg 760w, assets/img/faq-hero.jpg 1076w" sizes="100vw" alt="A planner shows a couple a wedding album and mood board" fetchpriority="high" width="1076" height="941"><div class="fade b"></div></div>
   <div class="faq-head reveal"><h1>Questions<br>you may have.</h1><p>Here are some quick answers to help you understand our process, services and approach.</p></div>
 </section>
 <section class="faq-list">

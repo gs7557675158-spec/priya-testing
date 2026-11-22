@@ -23,4 +23,16 @@
       if (d.open) document.querySelectorAll('.faq').forEach(function (o) { if (o !== d) o.open = false; });
     });
   });
+
+  /* About page ornaments: start the gold line-art animation when a section scrolls into view */
+  (function () {
+    var secs = document.querySelectorAll('.story, .drives');
+    if (!secs.length) return;
+    document.documentElement.classList.add('orn-js');
+    if (!('IntersectionObserver' in window)) { secs.forEach(function (s) { s.classList.add('orn-on'); }); return; }
+    var o = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('orn-on'); o.unobserve(e.target); } });
+    }, { threshold: 0.2 });
+    secs.forEach(function (s) { o.observe(s); });
+  })();
 })();

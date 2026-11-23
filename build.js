@@ -18,7 +18,7 @@ const layout = (file, title, body) => `<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20261125">
+<link rel="stylesheet" href="css/style.css?v=20261126">
 </head>
 <body class="page-${file}">
 <header class="site-header${file === 'index' ? ' on-hero' : file === 'services' ? ' on-hero dark' : ''}">
@@ -28,7 +28,7 @@ const layout = (file, title, body) => `<!DOCTYPE html>
 <main>
 ${body}
 </main>
-<script src="js/main.js?v=20261125"></script>
+<script src="js/main.js?v=20261126"></script>
 </body>
 </html>
 `;
@@ -165,6 +165,7 @@ pages.contact = ['Contact', `
 </section>
 <section class="form-wrap">
   <form class="enq" id="enq" novalidate>
+    <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;width:0">
     <input type="text" name="name" placeholder="Full Name *" required>
     <input type="email" name="email" placeholder="Email Address *" required>
     <input type="tel" name="phone" placeholder="Phone Number *" required>
@@ -174,6 +175,7 @@ pages.contact = ['Contact', `
     <button type="submit" class="btn wide">SUBMIT ENQUIRY</button>
     <p class="note">Your information is safe with us. We respect your privacy and will only use these details to connect with you about your celebration.</p>
     <p class="thanks" hidden>Thank you — we will be in touch shortly.</p>
+    <p class="form-error" hidden role="alert">Sorry, we could not send your enquiry. Please try again, or email us directly at <a href="mailto:events@redknot.co.in">events@redknot.co.in</a>.</p>
   </form>
 </section>
 <section class="contact-end"><h2 class="reveal">Extraordinary<br>begins with<br>a single conversation.</h2><span class="rule"></span><div class="ce-img"><img src="${I('flowers')}" alt=""><div class="fade"></div></div></section>`];

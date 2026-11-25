@@ -17,18 +17,19 @@ const layout = (file, title, body) => `<!DOCTYPE html>
 <title>${title} | Tied Once by RedKnot</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20261126">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=20261207">
 </head>
 <body class="page-${file}">
 <header class="site-header${file === 'index' ? ' on-hero' : file === 'services' ? ' on-hero dark' : ''}">
-  <a class="logo" href="index.html"><span class="logo-s">Luxury Weddings by RedKnot</span><span class="logo-t">TIED ONCE</span></a>
-  <nav class="nav">${NAV.map(([f, l]) => `<a href="${f}.html"${f === file ? ' class="active"' : ''}>${l}</a>`).join('')}</nav>
+  <a class="logo" href="index.html"><span class="logo-s">REDKNOT PRIVÉ</span><span class="logo-t">Private Celebrations &amp; Bespoke Experiences</span></a>
+  <nav class="nav">${NAV.map(([f, l]) => `<a href="${f}.html"${f === file ? ' class="active"' : ''}>${l}</a>`).join('')}</nav>${file === 'index' ? '
+  <div class="flourish" aria-hidden="true"><img src="assets/img/flourish-l.png?v=5" alt=""><img class="fk" src="assets/img/flourish-k.png?v=5" alt=""><img src="assets/img/flourish-r.png?v=5" alt=""></div>' : ''}
 </header>
 <main>
 ${body}
 </main>
-<script src="js/main.js?v=20261126"></script>
+<script src="js/main.js?v=20261127"></script>
 </body>
 </html>
 `;
@@ -75,8 +76,8 @@ pages.index = ['Home', `
 </section>
 <section class="pillars">
   <div class="reveal"><img src="assets/img/ic-craft.png" alt=""><span>WEDDING<br>CRAFT</span></div>
-  <div class="reveal"><img src="assets/img/ic-creative.png" alt=""><span>CREATIVE<br>DIRECTION</span></div>
-  <div class="reveal"><img src="assets/img/ic-flawless.png" alt=""><span>FLAWLESS<br>EXECUTION</span></div>
+  <div class="reveal"><img src="assets/img/ic-creative.png?v=5" alt=""><span>CREATIVE<br>DIRECTION</span></div>
+  <div class="reveal"><img src="assets/img/ic-flawless.png?v=5" alt=""><span>FLAWLESS<br>EXECUTION</span></div>
   <div class="reveal"><img src="assets/img/ic-hospitality.png" alt=""><span>BESPOKE<br>HOSPITALITY</span></div>
 </section>
 <section class="film film-decor"><img class="bg" src="${I('design-decor')}" alt=""><div class="shade film-shade"></div>
@@ -191,7 +192,6 @@ const faq = [
   ['What happens after we submit an enquiry?', 'Our team will connect with you to understand your celebration and discuss next steps.'],
   ['Do you take on a limited number of weddings?', 'Please get in touch with us to discuss availability for your dates.'],
   ['Can you work with our preferred vendors?', 'Please share your preferences with us and we will discuss how best to bring them together.'],
-  ['What makes Tied Once by RedKnot different?', 'With over 38 years of experience in the events industry, RedKnot brings creative, production, hospitality and on-ground execution together for every celebration.'],
 ];
 pages.faqs = ['FAQs', `
 <section class="faq-hero"><div class="faq-img"><img src="assets/img/faq-hero-m.jpg" srcset="assets/img/faq-hero-m.jpg 760w, assets/img/faq-hero.jpg 1076w" sizes="100vw" alt="A planner shows a couple a wedding album and mood board" fetchpriority="high" width="1076" height="941"><div class="fade b"></div></div>
@@ -200,7 +200,7 @@ pages.faqs = ['FAQs', `
 <section class="faq-list">
 ${faq.map(([q, a]) => `<details class="faq reveal"><summary>${q}<i></i></summary><p>${a}</p></details>`).join('\n')}
 </section>
-<section class="faq-end"><div class="fe-img"><img src="${I('pavilion')}" alt=""><div class="fade"></div></div>
+<section class="faq-end"><div class="fe-img"><img src="assets/img/faq-end-m.jpg" srcset="assets/img/faq-end-m.jpg 900w, assets/img/faq-end.jpg 1672w" sizes="100vw" alt="" loading="lazy" decoding="async"><div class="fade"></div></div>
   <div class="fe-t reveal"><h2>Still have a question?</h2><p>We're here to help.</p>${btn('GET IN TOUCH', 'contact.html')}</div></section>`];
 
 fs.mkdirSync(OUT, { recursive: true });

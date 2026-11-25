@@ -5,7 +5,7 @@ const I = n => `assets/img/${n}.jpg`;
 
 const sketch = (cls = '') => `<svg class="sketch ${cls}" viewBox="0 0 200 220" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
 <path d="M20 210V110M180 210V110M20 110c0-30 20-45 40-45M180 110c0-30-20-45-40-45M60 65c0-25 10-35 40-50 30 15 40 25 40 50M100 15V2M96 6h8M60 210V120c0-22 18-30 40-30s40 8 40 30v90M72 210V126c0-14 12-20 28-20s28 6 28 20v84M10 210h180M30 150h20M150 150h20M40 130v-15M160 130v-15M100 40c-8 0-14 6-14 14M100 40c8 0 14 6 14 14"/></svg>`;
-const bird = `<svg class="bird" viewBox="0 0 40 20" fill="none" stroke="currentColor" stroke-width="1"><path d="M2 12c8-10 14-8 18 0 4-8 10-10 18 0"/></svg>`;
+const bird = ``;
 
 const NAV = [['index', 'Home'], ['about', 'About'], ['services', 'Services'], ['portfolio', 'Portfolio'], ['testimonials', 'Testimonials'], ['contact', 'Contact'], ['faqs', 'FAQs']];
 

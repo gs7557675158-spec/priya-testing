@@ -18,13 +18,12 @@ const layout = (file, title, body) => `<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20261207">
+<link rel="stylesheet" href="css/style.css?v=20261237">
 </head>
 <body class="page-${file}">
 <header class="site-header${file === 'index' ? ' on-hero' : file === 'services' ? ' on-hero dark' : ''}">
-  <a class="logo" href="index.html"><span class="logo-s">REDKNOT PRIVÉ</span><span class="logo-t">Private Celebrations &amp; Bespoke Experiences</span></a>
-  <nav class="nav">${NAV.map(([f, l]) => `<a href="${f}.html"${f === file ? ' class="active"' : ''}>${l}</a>`).join('')}</nav>${file === 'index' ? '
-  <div class="flourish" aria-hidden="true"><img src="assets/img/flourish-l.png?v=5" alt=""><img class="fk" src="assets/img/flourish-k.png?v=5" alt=""><img src="assets/img/flourish-r.png?v=5" alt=""></div>' : ''}
+  <a class="logo" href="index.html" aria-label="Luxury Weddings by RedKnot"><span class="lg-line" aria-hidden="true"><img src="assets/img/flourish-l.png?v=10" alt=""><img class="lg-k" src="assets/img/flourish-k.png?v=10" alt=""><img src="assets/img/flourish-r.png?v=10" alt=""></span><img class="lg-text" src="assets/img/logo-t1.png?v=11" alt="Luxury Weddings by RedKnot" width="735" height="35"><img class="lg-text2" src="assets/img/logo-t2.png?v=11" alt="" width="351" height="24"></a>
+  <nav class="nav">${NAV.map(([f, l]) => `<a href="${f}.html"${f === file ? ' class="active"' : ''}>${l}</a>`).join('')}</nav>
 </header>
 <main>
 ${body}
@@ -152,7 +151,7 @@ const tm = [
 pages.testimonials = ['Testimonials', `
 <section class="t-intro">${bird}
   <div class="reveal"><h1>In their<br>words.</h1><p>Real people. Real emotions.<br>A few thoughts from families<br>who’ve had the honour to celebrate with.</p></div>
-  <img class="t-hero reveal" src="assets/img/testimonials-hero-m.jpg" srcset="assets/img/testimonials-hero-m.jpg 760w, assets/img/testimonials-hero.jpg 1175w" sizes="(min-width:900px) 60vw, 100vw" alt="A bride and groom share a joyful moment during their wedding ceremony" fetchpriority="high" width="1175" height="1175"><div class="t-fade"></div>
+  <img class="t-hero reveal" src="assets/img/testimonials-hero-m.jpg?v=3" srcset="assets/img/testimonials-hero-m.jpg?v=3 760w, assets/img/testimonials-hero.jpg?v=3 1200w" sizes="(min-width:900px) 60vw, 100vw" alt="A bride and groom surrounded by falling rose petals during their wedding ceremony" fetchpriority="high" width="760" height="760"><div class="t-fade"></div>
 </section>
 <section class="t-list">
 ${tm.map(([n, c, q, img, f], i) => `<article class="tm ${i % 2 ? 'flip' : ''} reveal"><div class="tm-t"><span class="qm">“</span><p>${q}</p><strong>${n}</strong><em>${c}</em></div></article>`).join('\n')}

@@ -1177,14 +1177,28 @@ body .site-header .nav,body .site-header.on-hero .nav{text-shadow:none}
 body .site-header.on-hero{isolation:isolate}
 body .site-header.on-hero::before{content:"";position:absolute;z-index:-1;left:0;right:0;top:0;bottom:-34px;pointer-events:none;background:linear-gradient(180deg,rgba(247,223,219,.96) 0%,rgba(247,223,219,.93) 62%,rgba(247,223,219,.6) 84%,rgba(247,223,219,0) 100%)}
 
-/* home: gold knot flourish under the menu - draws outward from the centre to both sides */
-.flourish{--fh:26px;position:absolute;left:0;right:0;bottom:calc(-26px - var(--fh)/2);height:var(--fh);display:flex;align-items:center;pointer-events:none;z-index:2;filter:drop-shadow(0 .5px 1px rgba(70,42,8,.35));animation:flourish-draw 1.7s cubic-bezier(.22,.7,.2,1) .3s both}
-.flourish img{display:block;height:100%;object-fit:fill}
-.flourish img:first-child,.flourish img:last-child{flex:1 1 0;min-width:0;width:0}
-.flourish .fk{flex:none;width:auto}
-@keyframes flourish-draw{from{clip-path:inset(-20% 50% -20% 50%);opacity:.2}12%{opacity:1}to{clip-path:inset(-20% 0 -20% 0);opacity:1}}
-@media(min-width:900px){.flourish{--fh:46px}}
-@media(prefers-reduced-motion:reduce){.flourish{animation:none}}
-body:not(.page-index) .site-header .logo-s,body:not(.page-index) .site-header .logo-t,body:not(.page-index) .site-header .nav a,
-body:not(.page-index) .site-header.dark.on-hero .logo-s,body:not(.page-index) .site-header.dark.on-hero .logo-t,body:not(.page-index) .site-header.dark.on-hero .nav a,
-body:not(.page-index) .site-header.on-hero .logo-s,body:not(.page-index) .site-header.on-hero .logo-t,body:not(.page-index) .site-header.on-hero .nav a{color:#276852}
+/* header logo: gold thread across the full width, knot + wordmark in the centre */
+.site-header .logo{display:block;line-height:0;filter:brightness(.86) saturate(1.2) drop-shadow(0 .5px .6px rgba(60,38,6,.3))}
+.lg-line{--fh:36px;display:flex;flex-direction:row;align-items:center;height:var(--fh);width:100vw;margin-left:calc(50% - 50vw);pointer-events:none}
+.lg-line img{display:block;height:100%;object-fit:fill}
+.lg-line img:first-child,.lg-line img:last-child{flex:1 1 0;min-width:0;width:0}
+.lg-line .lg-k{flex:none;width:auto}
+.site-header .logo .lg-text{display:block;margin:3px auto 0;width:210px;height:auto}
+.site-header .nav{margin-top:8px}
+@media(min-width:900px){.lg-line{--fh:50px}.site-header .logo .lg-text{width:290px;margin-top:10px}.site-header .nav,.site-header.on-hero .nav{margin-top:16px}}
+
+/* home/services: pink band now covers the whole menu so the green links read exactly as on the other pages */
+body .site-header.on-hero::before{bottom:-18px;background:linear-gradient(180deg,rgba(244,214,210,.97) 0%,rgba(244,214,210,.97) 80%,rgba(244,214,210,.7) 92%,rgba(244,214,210,0) 100%)}
+
+/* menu links: emerald green on every page and in every state */
+body .site-header .nav a,body:not(.page-index) .site-header .nav a,body .site-header.on-hero .nav a,body .site-header.dark .nav a,body .site-header.dark.on-hero .nav a,
+body .site-header .nav a:hover,body .site-header .nav a.active,body .site-header .nav a:visited{color:#276852!important;opacity:1}
+
+/* logo wordmark: LUXURY WEDDINGS + larger BY REDKNOT (same width as the line above it, original letter spacing kept) */
+.site-header .logo .lg-text{width:210px;margin:3px auto 0}
+.site-header .logo .lg-text2{display:block;width:118px;height:auto;margin:5px auto 0}
+@media(min-width:900px){.site-header .logo .lg-text{width:290px;margin-top:10px}.site-header .logo .lg-text2{width:178px;margin-top:8px}}
+
+/* never let the full-bleed logo thread create a horizontal scrollbar */
+html,body{overflow-x:clip}
+.site-header{overflow-x:clip}

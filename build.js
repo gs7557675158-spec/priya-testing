@@ -18,11 +18,11 @@ const layout = (file, title, body) => `<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20261237">
+<link rel="stylesheet" href="css/style.css?v=20261238">
 </head>
 <body class="page-${file}">
 <header class="site-header${file === 'index' ? ' on-hero' : file === 'services' ? ' on-hero dark' : ''}">
-  <a class="logo" href="index.html" aria-label="Luxury Weddings by RedKnot"><span class="lg-line" aria-hidden="true"><img src="assets/img/flourish-l.png?v=10" alt=""><img class="lg-k" src="assets/img/flourish-k.png?v=10" alt=""><img src="assets/img/flourish-r.png?v=10" alt=""></span><img class="lg-text" src="assets/img/logo-t1.png?v=11" alt="Luxury Weddings by RedKnot" width="735" height="35"><img class="lg-text2" src="assets/img/logo-t2.png?v=11" alt="" width="351" height="24"></a>
+  <a class="logo" href="index.html" aria-label="Luxury Weddings by RedKnot"><span class="lg-line" aria-hidden="true"><img src="assets/img/flourish-l.png?v=12" alt=""><img class="lg-k" src="assets/img/flourish-k.png?v=12" alt=""><img src="assets/img/flourish-r.png?v=12" alt=""></span><img class="lg-text" src="assets/img/logo-t1.png?v=12" alt="Luxury Weddings by RedKnot" width="580" height="29"><img class="lg-text2" src="assets/img/logo-t2.png?v=12" alt="" width="356" height="26"></a>
   <nav class="nav">${NAV.map(([f, l]) => `<a href="${f}.html"${f === file ? ' class="active"' : ''}>${l}</a>`).join('')}</nav>
 </header>
 <main>

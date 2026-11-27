@@ -1202,3 +1202,8 @@ body .site-header .nav a:hover,body .site-header .nav a.active,body .site-header
 /* never let the full-bleed logo thread create a horizontal scrollbar */
 html,body{overflow-x:clip}
 .site-header{overflow-x:clip}
+
+/* logo: crisp - colour is baked into the artwork, no CSS filter blur; art is pre-sized for sharp 2x screens */
+.site-header .logo{filter:none}
+.site-header .logo img{image-rendering:auto}
+.lg-line .lg-k{height:var(--fh);width:auto}
